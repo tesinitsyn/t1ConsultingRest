@@ -1,8 +1,11 @@
 package com.tesinitsyn.t1consultingrest.service;
 
+import org.springframework.stereotype.Service;
+
 import java.util.HashMap;
 import java.util.Map;
 
+@Service
 public class SortingAndCountingService {
     public String countCharacters(String input){
         Map<Character, Integer> charCount = new HashMap<>();
