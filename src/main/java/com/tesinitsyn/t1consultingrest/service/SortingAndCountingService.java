@@ -8,6 +8,9 @@ import java.util.Map;
 @Service
 public class SortingAndCountingService {
     public String countCharacters(String input){
+        if (input.isEmpty()){
+            return "Input was empty string";
+        }
         Map<Character, Integer> charCount = new HashMap<>();
         for (char c : input.toCharArray()) {
             charCount.put(c, charCount.getOrDefault(c, 0) + 1);
